@@ -4,7 +4,7 @@ public class UnsignedShort
 {
 	short s;
 	
-	UnsignedShort(byte param)
+	UnsignedShort(short param)
 	{
 		set(param);
 	}
@@ -14,7 +14,7 @@ public class UnsignedShort
 		
 	}
 	
-	public void set(byte param)
+	public void set(short param)
 	{
 		s = param;
 	}
@@ -22,5 +22,15 @@ public class UnsignedShort
 	public short get()
 	{
 		return (short) (s & 0xFFFF);
+	}
+	
+	public short add(int param)
+	{
+		return (short) ((s + param) & 0xFF);
+	}
+	
+	public short sub(int param)
+	{
+		return add(-param);
 	}
 }

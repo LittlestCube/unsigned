@@ -4,7 +4,7 @@ public class UnsignedInt
 {
 	int in;
 	
-	UnsignedInt(byte param)
+	UnsignedInt(int param)
 	{
 		set(param);
 	}
@@ -14,7 +14,7 @@ public class UnsignedInt
 		
 	}
 	
-	public void set(byte param)
+	public void set(int param)
 	{
 		in = param;
 	}
@@ -22,5 +22,15 @@ public class UnsignedInt
 	public int get()
 	{
 		return (int) (in & 0xFFFF);
+	}
+	
+	public int add(int param)
+	{
+		return (int) ((in + param) & 0xFF);
+	}
+	
+	public int sub(int param)
+	{
+		return add(-param);
 	}
 }

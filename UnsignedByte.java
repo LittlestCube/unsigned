@@ -23,4 +23,14 @@ public class UnsignedByte
 	{
 		return (byte) (b & 0xFF);
 	}
+	
+	public byte add(int param)
+	{
+		return (byte) ((b + param) & 0xFF);
+	}
+	
+	public byte sub(int param)
+	{
+		return add(-param);
+	}
 }
