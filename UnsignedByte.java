@@ -14,12 +14,12 @@ public class UnsignedByte
 		
 	}
 	
-	void set(byte param)
+	public void set(byte param)
 	{
 		b = param;
 	}
 	
-	byte get()
+	public byte get()
 	{
 		return (byte) (b & 0xFF);
 	}

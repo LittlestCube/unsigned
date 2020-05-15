@@ -14,12 +14,12 @@ public class UnsignedInt
 		
 	}
 	
-	void set(byte param)
+	public void set(byte param)
 	{
 		in = param;
 	}
 	
-	int get()
+	public int get()
 	{
 		return (int) (in & 0xFFFF);
 	}

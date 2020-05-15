@@ -14,12 +14,12 @@ public class UnsignedShort
 		
 	}
 	
-	void set(byte param)
+	public void set(byte param)
 	{
 		s = param;
 	}
 	
-	short get()
+	public short get()
 	{
 		return (short) (s & 0xFFFF);
 	}
