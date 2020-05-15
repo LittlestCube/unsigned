@@ -29,9 +29,62 @@ public class UnsignedInt
 		return (int) unsign(in);
 	}
 	
+	// ------- byte parameterin --------
+	public int add(byte param)
+	{
+		return unsign((int) (in + param));
+	}
+	
+	public int sub(byte param)
+	{
+		return add(-param);
+	}
+	
+	public int or(byte param)
+	{
+		return unsign((int) (in |= param));
+	}
+	
+	public int and(byte param)
+	{
+		return unsign((int) (in &= param));
+	}
+	
+	public int xor(byte param)
+	{
+		return unsign((int) (in ^= param));
+	}
+	
+	// ------ int parameterin --------
+	public int add(short param)
+	{
+		return unsign((int) (in + param));
+	}
+	
+	public int sub(short param)
+	{
+		return add(-param);
+	}
+	
+	public int or(short param)
+	{
+		return unsign((int) (in |= param));
+	}
+	
+	public int and(short param)
+	{
+		return unsign((int) (in &= param));
+	}
+	
+	public int xor(short param)
+	{
+		return unsign((int) (in ^= param));
+	}
+	
+	// -------- int parameterin --------
 	public int add(int param)
 	{
-		return (int) unsign(in + param);
+		return unsign((int) (in + param));
 	}
 	
 	public int sub(int param)
@@ -41,16 +94,16 @@ public class UnsignedInt
 	
 	public int or(int param)
 	{
-		return (int) unsign(in |= param);
+		return unsign((int) (in |= param));
 	}
 	
 	public int and(int param)
 	{
-		return (int) unsign(in &= param);
+		return unsign((int) (in &= param));
 	}
 	
 	public int xor(int param)
 	{
-		return (int) unsign(in ^= param);
+		return unsign((int) (in ^= param));
 	}
 }

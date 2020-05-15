@@ -29,6 +29,59 @@ public class UnsignedByte
 		return unsign(b);
 	}
 	
+	// ------- byte parameters --------
+	public byte add(byte param)
+	{
+		return unsign((byte) (b + param));
+	}
+	
+	public byte sub(byte param)
+	{
+		return add(-param);
+	}
+	
+	public byte or(byte param)
+	{
+		return unsign((byte) (b |= param));
+	}
+	
+	public byte and(byte param)
+	{
+		return unsign((byte) (b &= param));
+	}
+	
+	public byte xor(byte param)
+	{
+		return unsign((byte) (b ^= param));
+	}
+	
+	// ------ short parameters --------
+	public byte add(short param)
+	{
+		return unsign((byte) (b + param));
+	}
+	
+	public byte sub(short param)
+	{
+		return add(-param);
+	}
+	
+	public byte or(short param)
+	{
+		return unsign((byte) (b |= param));
+	}
+	
+	public byte and(short param)
+	{
+		return unsign((byte) (b &= param));
+	}
+	
+	public byte xor(short param)
+	{
+		return unsign((byte) (b ^= param));
+	}
+	
+	// -------- int parameters --------
 	public byte add(int param)
 	{
 		return unsign((byte) (b + param));
