@@ -1,15 +1,15 @@
-package unsigned;
+package littlecube.unsigned;
 
 public class UnsignedShort
 {
 	short s;
 	
-	UnsignedShort(short param)
+	public UnsignedShort(short param)
 	{
 		set(param);
 	}
 	
-	UnsignedShort()
+	public UnsignedShort()
 	{
 		
 	}

@@ -1,15 +1,15 @@
-package unsigned;
+package littlecube.unsigned;
 
 public class UnsignedInt
 {
 	int in;
 	
-	UnsignedInt(int param)
+	public UnsignedInt(int param)
 	{
 		set(param);
 	}
 	
-	UnsignedInt()
+	public UnsignedInt()
 	{
 		
 	}
