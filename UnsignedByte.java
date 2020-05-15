@@ -16,7 +16,7 @@ public class UnsignedByte
 	
 	public byte unsign(byte param)
 	{
-		return (byte) (param & 0xFFFF);
+		return (byte) (param & 0xFF);
 	}
 	
 	public void set(byte param)
