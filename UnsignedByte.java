@@ -14,6 +14,11 @@ public class UnsignedByte
 		
 	}
 	
+	public byte unsign(byte param)
+	{
+		return (byte) (param & 0xFFFF);
+	}
+	
 	public void set(byte param)
 	{
 		b = param;
@@ -21,16 +26,31 @@ public class UnsignedByte
 	
 	public byte get()
 	{
-		return (byte) (b & 0xFF);
+		return unsign(b);
 	}
 	
 	public byte add(int param)
 	{
-		return (byte) ((b + param) & 0xFF);
+		return unsign((byte) (b + param));
 	}
 	
 	public byte sub(int param)
 	{
 		return add(-param);
+	}
+	
+	public byte or(int param)
+	{
+		return unsign((byte) (b |= param));
+	}
+	
+	public byte and(int param)
+	{
+		return unsign((byte) (b &= param));
+	}
+	
+	public byte xor(int param)
+	{
+		return unsign((byte) (b ^= param));
 	}
 }

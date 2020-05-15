@@ -14,6 +14,11 @@ public class UnsignedShort
 		
 	}
 	
+	public short unsign(short param)
+	{
+		return (short) (param & 0xFFFF);
+	}
+	
 	public void set(short param)
 	{
 		s = param;
@@ -21,16 +26,31 @@ public class UnsignedShort
 	
 	public short get()
 	{
-		return (short) (s & 0xFFFF);
+		return unsign(s);
 	}
 	
 	public short add(int param)
 	{
-		return (short) ((s + param) & 0xFF);
+		return unsign((short) (s + param));
 	}
 	
 	public short sub(int param)
 	{
 		return add(-param);
+	}
+	
+	public short or(int param)
+	{
+		return unsign((short) (s |= param));
+	}
+	
+	public short and(int param)
+	{
+		return unsign((short) (s &= param));
+	}
+	
+	public short xor(int param)
+	{
+		return unsign((short) (s ^= param));
 	}
 }
