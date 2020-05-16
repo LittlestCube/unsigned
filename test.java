@@ -4,15 +4,15 @@ public class test
 {
 	public static void main(String args[])
 	{
-		UnsignedByte ub = new UnsignedByte(0xF0);
-		byte b = (byte) 0xF0;
+		UnsignedShort ub = new UnsignedShort(0x8000);
+		short s = (short) 0x8000;
 		
 		ub.xor(0x50);
-		b ^= 0x50;
+		s ^= 0x50;
 		
-		System.out.println("\n" + (int) ub.b);
+		System.out.println("\n" + (int) ub.s);
 		System.out.println(ub.get() + "\n");
-		System.out.println(b);
-		System.out.println(ub.unsign(b));
+		System.out.println(s);
+		System.out.println(ub.unsign(s));
 	}
 }

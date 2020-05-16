@@ -2,7 +2,7 @@ package littlecube.unsigned;
 
 public class UnsignedShort
 {
-	short s;
+	public short s;
 	
 	public UnsignedShort(byte param)
 	{
