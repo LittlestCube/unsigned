@@ -14,9 +14,9 @@ public class UnsignedShort
 		
 	}
 	
-	public short unsign(short param)
+	public int unsign(short param)
 	{
-		return (short) (param & 0xFFFF);
+		return param & 0xFFFF;
 	}
 	
 	public void set(short param)
@@ -24,86 +24,148 @@ public class UnsignedShort
 		s = param;
 	}
 	
-	public short get()
+	public int get()
 	{
 		return unsign(s);
 	}
 	
+	// -------- UnsignedShort parameters --------
+	public void set(UnsignedShort param)
+	{
+		s = (byte) param.s;
+	}
+	
+	public void add(UnsignedShort param)
+	{
+		s += param.get();
+	}
+	
+	public void sub(UnsignedShort param)
+	{
+		add(-param.get());
+	}
+	
+	public void or(UnsignedShort param)
+	{
+		s |= param.get();
+	}
+	
+	public void and(UnsignedShort param)
+	{
+		s &= param.get();
+	}
+	
+	public void xor(UnsignedShort param)
+	{
+		s ^= param.get();
+	}
+	
+	// -------- UnsignedByte parameters --------
+	public void set(UnsignedByte param)
+	{
+		s = param.b;
+	}
+	
+	public void add(UnsignedByte param)
+	{
+		s += param.get();
+	}
+	
+	public void sub(UnsignedByte param)
+	{
+		add(-param.get());
+	}
+	
+	public void or(UnsignedByte param)
+	{
+		s |= param.get();
+	}
+	
+	public void and(UnsignedByte param)
+	{
+		s &= param.get();
+	}
+	
+	public void xor(UnsignedByte param)
+	{
+		s ^= param.get();
+	}
+	
 	// ------- byte parameters --------
-	public short add(byte param)
+	public void add(byte param)
 	{
-		return unsign((short) (s + param));
+		s += param;
 	}
 	
-	public short sub(byte param)
+	public void sub(byte param)
 	{
-		return add(-param);
+		add(-param);
 	}
 	
-	public short or(byte param)
+	public void or(byte param)
 	{
-		return unsign((short) (s |= param));
+		s |= param;
 	}
 	
-	public short and(byte param)
+	public void and(byte param)
 	{
-		return unsign((short) (s &= param));
+		s &= param;
 	}
 	
-	public short xor(byte param)
+	public void xor(byte param)
 	{
-		return unsign((short) (s ^= param));
+		s ^= param;
 	}
 	
 	// ------ short parameters --------
-	public short add(short param)
+	public void add(short param)
 	{
-		return unsign((short) (s + param));
+		s += param;
 	}
 	
-	public short sub(short param)
+	public void sub(short param)
 	{
-		return add(-param);
+		add(-param);
 	}
 	
-	public short or(short param)
+	public void or(short param)
 	{
-		return unsign((short) (s |= param));
+		s |= param;
 	}
 	
-	public short and(short param)
+	public void and(short param)
 	{
-		return unsign((short) (s &= param));
+		s &= param;
 	}
 	
-	public short xor(short param)
+	public void xor(short param)
 	{
-		return unsign((short) (s ^= param));
+		s ^= param;
 	}
 	
 	// -------- int parameters --------
-	public short add(int param)
+	public void add(int param)
 	{
-		return unsign((short) (s + param));
+		s += param;
 	}
 	
-	public short sub(int param)
+	public void sub(int param)
 	{
-		return add(-param);
+		add(-param);
 	}
 	
-	public short or(int param)
+	public void or(int param)
 	{
-		return unsign((short) (s |= param));
+		s |= param;
 	}
 	
-	public short and(int param)
+	public void and(int param)
 	{
-		return unsign((short) (s &= param));
+		s &= param;
 	}
 	
-	public short xor(int param)
+	public void xor(int param)
 	{
-		return unsign((short) (s ^= param));
+		s ^= param;
 	}
 }

@@ -21,7 +21,7 @@ public class UnsignedByte
 	
 	public UnsignedByte()
 	{
-		
+		set(0);
 	}
 	
 	public int unsign(byte param)
@@ -34,10 +34,41 @@ public class UnsignedByte
 		return unsign(b);
 	}
 	
+	// -------- UnsignedShort parameters --------
+	public void set(UnsignedShort param)
+	{
+		b = (byte) param.s;
+	}
+	
+	public void add(UnsignedShort param)
+	{
+		b += param.get();
+	}
+	
+	public void sub(UnsignedShort param)
+	{
+		add(-param.get());
+	}
+	
+	public void or(UnsignedShort param)
+	{
+		b |= param.get();
+	}
+	
+	public void and(UnsignedShort param)
+	{
+		b &= param.get();
+	}
+	
+	public void xor(UnsignedShort param)
+	{
+		b ^= param.get();
+	}
+	
 	// -------- UnsignedByte parameters --------
 	public void set(UnsignedByte param)
 	{
-		b = (byte) param.get();
+		b = param.b;
 	}
 	
 	public void add(UnsignedByte param)
