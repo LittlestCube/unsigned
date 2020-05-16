@@ -4,7 +4,17 @@ public class UnsignedShort
 {
 	short s;
 	
+	public UnsignedShort(byte param)
+	{
+		set(param);
+	}
+	
 	public UnsignedShort(short param)
+	{
+		set(param);
+	}
+	
+	public UnsignedShort(int param)
 	{
 		set(param);
 	}
