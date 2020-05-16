@@ -19,11 +19,6 @@ public class UnsignedShort
 		return param & 0xFFFF;
 	}
 	
-	public void set(short param)
-	{
-		s = param;
-	}
-	
 	public int get()
 	{
 		return unsign(s);
@@ -92,6 +87,11 @@ public class UnsignedShort
 	}
 	
 	// ------- byte parameters --------
+	public void set(byte param)
+	{
+		s = (short) param;
+	}
+	
 	public void add(byte param)
 	{
 		s += param;
@@ -118,6 +118,11 @@ public class UnsignedShort
 	}
 	
 	// ------ short parameters --------
+	public void set(short param)
+	{
+		s = param;
+	}
+	
 	public void add(short param)
 	{
 		s += param;
@@ -144,6 +149,10 @@ public class UnsignedShort
 	}
 	
 	// -------- int parameters --------
+	public void set(int param)
+	{
+		s = (short) param;
+	}
 	public void add(int param)
 	{
 		s += param;
