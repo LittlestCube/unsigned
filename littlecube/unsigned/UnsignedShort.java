@@ -52,17 +52,17 @@ public class UnsignedShort
 	
 	public void or(UnsignedShort param)
 	{
-		s |= param.get();
+		s |= param.s;
 	}
 	
 	public void and(UnsignedShort param)
 	{
-		s &= param.get();
+		s &= param.s;
 	}
 	
 	public void xor(UnsignedShort param)
 	{
-		s ^= param.get();
+		s ^= param.s;
 	}
 	
 	// -------- UnsignedByte parameters --------
@@ -83,17 +83,17 @@ public class UnsignedShort
 	
 	public void or(UnsignedByte param)
 	{
-		s |= param.get();
+		s |= param.b;
 	}
 	
 	public void and(UnsignedByte param)
 	{
-		s &= param.get();
+		s &= param.b;
 	}
 	
 	public void xor(UnsignedByte param)
 	{
-		s ^= param.get();
+		s ^= param.b;
 	}
 	
 	// ------- byte parameters --------
