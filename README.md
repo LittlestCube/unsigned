@@ -2,6 +2,6 @@
 
 Dear Java...
 
-FRICK YOU
+frick you
 
 ~ LittleCube <3
