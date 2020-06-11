@@ -34,6 +34,11 @@ public class UnsignedByte
 		return unsign(b);
 	}
 	
+	public void setBit(int bit, int position)
+	{
+		b = (byte) ((bit << position) | b);
+	}
+	
 	// -------- UnsignedShort parameters --------
 	public void set(UnsignedShort param)
 	{
