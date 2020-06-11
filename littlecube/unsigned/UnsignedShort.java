@@ -36,7 +36,18 @@ public class UnsignedShort
 	
 	public void setBit(int bit, int position)
 	{
-		s = (short) ((bit << position) | s);
+		bit = bit % 2;
+		
+		s = (short) ((0x1 << position) | (s & ~(0x1 << position)));
+	}
+	
+	public void setByte(int nbyte, int position)
+	{
+		nbyte = nbyte & 0xFF;
+		
+		int actualPosition = position * 8;
+		
+		s = (short) ((nbyte << actualPosition) | (s & ~(0xFF << actualPosition)));
 	}
 	
 	// -------- UnsignedShort parameters --------
