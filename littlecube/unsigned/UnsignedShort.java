@@ -50,6 +50,11 @@ public class UnsignedShort
 		s = (short) ((nbyte << actualPosition) | (s & ~(0xFF << actualPosition)));
 	}
 	
+	public void craftShort(byte byte1, byte byte0)
+	{
+		s = (short) (byte1 << 8 | byte0);
+	}
+	
 	// -------- UnsignedShort parameters --------
 	public void set(UnsignedShort param)
 	{
