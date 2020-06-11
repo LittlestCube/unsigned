@@ -21,7 +21,7 @@ public class UnsignedShort
 	
 	public UnsignedShort()
 	{
-		
+		set(0);
 	}
 	
 	public int unsign(short param)
