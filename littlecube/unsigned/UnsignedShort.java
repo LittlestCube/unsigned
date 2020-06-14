@@ -38,7 +38,17 @@ public class UnsignedShort
 	{
 		bit %= 2;
 		
-		s = (short) (s & ~(bit << position));
+		bit %= 2;
+		
+		if (bit == 0)
+		{
+			s = (byte) (s & ~((0x1 << position)));
+		}
+		
+		else
+		{
+			s = (byte) (s | (0x1 << position));
+		}
 	}
 	
 	public void setByte(int nbyte, int position)
