@@ -5,4 +5,5 @@ run:
 	java test
 
 clean:
-	rm *.class
+	rm *.class || continue
+	cd littlecube/unsigned && $(MAKE) clean
