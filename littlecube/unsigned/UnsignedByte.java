@@ -38,7 +38,7 @@ public class UnsignedByte
 	{
 		bit %= 2;
 		
-		b = (byte) ((bit << position) | (b & ~(bit << position)));
+		b = (byte) (b & ~(bit << position));
 	}
 	
 	// -------- UnsignedShort parameters --------
