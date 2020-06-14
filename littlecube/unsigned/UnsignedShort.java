@@ -38,8 +38,6 @@ public class UnsignedShort
 	{
 		bit %= 2;
 		
-		bit %= 2;
-		
 		if (bit == 0)
 		{
 			s = (byte) (s & ~((0x1 << position)));
