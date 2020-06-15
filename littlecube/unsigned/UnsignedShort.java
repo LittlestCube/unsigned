@@ -24,10 +24,14 @@ public class UnsignedShort
 		set(0);
 	}
 	
+	
+	
 	public int unsign(short param)
 	{
 		return param & 0xFFFF;
 	}
+	
+	
 	
 	public int get()
 	{
@@ -39,11 +43,11 @@ public class UnsignedShort
 		return (s & (0x1 << position));
 	}
 	
-	public void setBit(int bit, int position)
+	public void setBit(int position, int value)
 	{
-		bit %= 2;
+		value %= 2;
 		
-		if (bit == 0)
+		if (value == 0)
 		{
 			s = (byte) (s & ~((0x1 << position)));
 		}
@@ -52,16 +56,6 @@ public class UnsignedShort
 		{
 			s = (byte) (s | (0x1 << position));
 		}
-	}
-	
-	public void left(int offset)
-	{
-		s <<= offset;
-	}
-	
-	public void right(int offset)
-	{
-		s >>= offset;
 	}
 	
 	public void setByte(int nbyte, int position)
@@ -77,6 +71,20 @@ public class UnsignedShort
 	{
 		s = (short) (byte1 << 8 | byte0);
 	}
+	
+	
+	
+	public void left(int offset)
+	{
+		s <<= offset;
+	}
+	
+	public void right(int offset)
+	{
+		s >>= offset;
+	}
+	
+	
 	
 	// -------- UnsignedShort parameters --------
 	public void set(UnsignedShort param)
@@ -109,6 +117,8 @@ public class UnsignedShort
 		s ^= param.s;
 	}
 	
+	
+	
 	// -------- UnsignedByte parameters --------
 	public void set(UnsignedByte param)
 	{
@@ -139,6 +149,8 @@ public class UnsignedShort
 	{
 		s ^= param.b;
 	}
+	
+	
 	
 	// ------- byte parameters --------
 	public void set(byte param)
@@ -171,6 +183,8 @@ public class UnsignedShort
 		s ^= param;
 	}
 	
+	
+	
 	// ------ short parameters --------
 	public void set(short param)
 	{
@@ -201,6 +215,8 @@ public class UnsignedShort
 	{
 		s ^= param;
 	}
+	
+	
 	
 	// -------- int parameters --------
 	public void set(int param)
