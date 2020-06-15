@@ -54,6 +54,16 @@ public class UnsignedShort
 		}
 	}
 	
+	public void left(int offset)
+	{
+		s <<= offset;
+	}
+	
+	public void right(int offset)
+	{
+		s >>= offset;
+	}
+	
 	public void setByte(int nbyte, int position)
 	{
 		nbyte = nbyte & 0xFF;

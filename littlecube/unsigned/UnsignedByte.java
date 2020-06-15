@@ -54,6 +54,16 @@ public class UnsignedByte
 		}
 	}
 	
+	public void left(int offset)
+	{
+		b <<= offset;
+	}
+	
+	public void right(int offset)
+	{
+		b >>= offset;
+	}
+	
 	// -------- UnsignedShort parameters --------
 	public void set(UnsignedShort param)
 	{
