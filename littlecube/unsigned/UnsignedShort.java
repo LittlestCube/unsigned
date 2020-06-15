@@ -34,6 +34,11 @@ public class UnsignedShort
 		return unsign(s);
 	}
 	
+	public int getBit(int position)
+	{
+		return (s & (0x1 << position));
+	}
+	
 	public void setBit(int bit, int position)
 	{
 		bit %= 2;

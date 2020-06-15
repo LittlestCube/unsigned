@@ -34,6 +34,11 @@ public class UnsignedByte
 		return unsign(b);
 	}
 	
+	public int getBit(int position)
+	{
+		return (b & (0x1 << position));
+	}
+	
 	public void setBit(int bit, int position)
 	{
 		bit %= 2;
