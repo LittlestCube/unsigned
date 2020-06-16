@@ -68,6 +68,11 @@ public class UnsignedByte
 		b >>= offset;
 	}
 	
+	public void comp()
+	{
+		b = (byte) ~b;
+	}
+	
 	
 	
 	// -------- UnsignedShort parameters --------

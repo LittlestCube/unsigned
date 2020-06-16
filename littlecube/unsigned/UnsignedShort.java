@@ -89,6 +89,11 @@ public class UnsignedShort
 		s >>= offset;
 	}
 	
+	public void comp()
+	{
+		s = (short) ~s;
+	}
+	
 	
 	
 	// -------- UnsignedShort parameters --------
