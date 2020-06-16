@@ -38,7 +38,7 @@ public class UnsignedByte
 	
 	public int getBit(int position)
 	{
-		return (b & (0x1 << position));
+		return ((b & (0x1 << position)) >> position);
 	}
 	
 	public void setBit(int position, int value)

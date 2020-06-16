@@ -40,7 +40,7 @@ public class UnsignedShort
 	
 	public int getBit(int position)
 	{
-		return (s & (0x1 << position));
+		return ((s & (0x1 << position)) >> position);
 	}
 	
 	public void setBit(int position, int value)
