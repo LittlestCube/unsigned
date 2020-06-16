@@ -58,6 +58,11 @@ public class UnsignedShort
 		}
 	}
 	
+	public int getByte(int position)
+	{
+		return s & (0xFF << position * 8);
+	}
+	
 	public void setByte(int nbyte, int position)
 	{
 		nbyte = nbyte & 0xFF;
