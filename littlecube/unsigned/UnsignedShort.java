@@ -72,6 +72,13 @@ public class UnsignedShort
 		s = (short) ((nbyte << actualPosition) | (s & ~(0xFF << actualPosition)));
 	}
 	
+	public byte subByte(int position)
+	{
+		int actualPosition = position * 8;
+		
+		return (byte) ((s & (0xFF << (actualPosition))) >> actualPosition);
+	}
+	
 	public void craftShort(byte byte1, byte byte0)
 	{
 		s = (short) (byte1 << 8 | byte0);
