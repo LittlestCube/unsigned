@@ -83,10 +83,8 @@ public class UnsignedShort
 	
 	public void craftShort(byte byte1, byte byte0)
 	{
-		short sbyte1 = byte1;
-		sbyte1 <<= 8;
-		
-		s = (short) (sbyte1 | byte0);
+		setByte(1, byte1);
+		setByte(0, byte0);
 	}
 	
 	
