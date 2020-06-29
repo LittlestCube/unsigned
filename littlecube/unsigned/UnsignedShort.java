@@ -65,7 +65,7 @@ public class UnsignedShort
 		return (byte) ((s & (0xFF << actualPosition)) >> actualPosition);
 	}
 	
-	public void setByte(int nbyte, int position)
+	public void setByte(int position, int nbyte)
 	{
 		nbyte = nbyte & 0xFF;
 		
@@ -83,7 +83,7 @@ public class UnsignedShort
 	
 	public void craftShort(byte byte1, byte byte0)
 	{
-		s = (short) (byte1 << 8 | byte0);
+		s = (short) ((byte1 << 8) | byte0);
 	}
 	
 	
