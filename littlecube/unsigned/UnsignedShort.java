@@ -58,13 +58,6 @@ public class UnsignedShort
 		}
 	}
 	
-	public byte getByte(int position)
-	{
-		int actualPosition = position * 8;
-		
-		return (byte) ((s & (0xFF << actualPosition)) >> actualPosition);
-	}
-	
 	public void setByte(int position, int nbyte)
 	{
 		nbyte = nbyte & 0xFF;
