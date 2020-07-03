@@ -102,7 +102,7 @@ public class UnsignedShort
 	// -------- UnsignedShort parameters --------
 	public void set(UnsignedShort param)
 	{
-		s = (byte) param.s;
+		s = param.s;
 	}
 	
 	public void add(UnsignedShort param)
