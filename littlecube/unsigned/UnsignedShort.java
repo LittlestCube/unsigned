@@ -78,6 +78,22 @@ public class UnsignedShort
 		}
 	}
 	
+	public void setBits(int from, int to, UnsignedByte value)
+	{
+		for (int i = from; i <= to; i++)
+		{
+			setBit(i, value.getBit(i));
+		}
+	}
+	
+	public void setBits(int from, int to, UnsignedShort value)
+	{
+		for (int i = from; i <= to; i++)
+		{
+			setBit(i, value.getBit(i));
+		}
+	}
+	
 	public void setByte(int position, int nbyte)
 	{
 		nbyte = nbyte & 0xFF;
