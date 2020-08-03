@@ -41,6 +41,18 @@ public class UnsignedByte
 		return ((b & (0x1 << position)) >> position);
 	}
 	
+	public int subBits(int from, int to)
+	{
+		int bits = 0;
+		
+		for (int i = from; i <= to; i++)
+		{
+			bits |= getBit(i) << (i - from);
+		}
+		
+		return bits;
+	}
+	
 	public void setBit(int position, int value)
 	{
 		value %= 2;
@@ -53,6 +65,14 @@ public class UnsignedByte
 		else
 		{
 			b = (byte) (b | (0x1 << position));
+		}
+	}
+	
+	public void setBits(int from, int ... values)
+	{
+		for (int i = 0; i < values.length; i++)
+		{
+			setBit(from + i, values[i]);
 		}
 	}
 	
