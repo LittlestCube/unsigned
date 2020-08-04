@@ -94,6 +94,16 @@ public class UnsignedByte
 	
 	
 	
+	public void setBits(int from, int to, int directValue)
+	{
+		for (int i = from; i <= to; i++)
+		{
+			setBit(i, ((directValue & (0x1 << (i - from))) >> i - from));
+		}
+	}
+	
+	
+	
 	public void left(int offset)
 	{
 		b <<= offset;
